@@ -1,0 +1,19 @@
+{
+  "name": "orgui-js-gcl",
+  "version": "0.1.0",
+  "description": "An JavaScript reference implementation for Org UI",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint"
+  },
+  "author": "Org Place Project",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "eslint": "^4.13.0",
+    "eslint-plugin-jest": "^21.4.2",
+    "jest": "^21.2.1"
+  }
+}

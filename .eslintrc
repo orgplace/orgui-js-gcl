@@ -1,0 +1,25 @@
+{
+	"plugins": ["jest"],
+	"env": {
+		"browser": true,
+		"es6": true,
+		"node" : true,
+		"jest/globals": true
+	},
+	"parserOptions": {
+		"sourceType": "module"
+	},
+	"rules": {
+		"comma-dangle": ["error", "always-multiline"],
+		"block-scoped-var": "error",
+		"eqeqeq": ["error", "smart"],
+		"no-eq-null": "error",
+		"no-implicit-coercion": "error",
+		"no-multi-spaces": "error",
+		"no-console": "off",
+		"indent": ["error", 2],
+		"semi": ["error", "always"],
+		"complexity": "warn"
+	},
+	"extends": "eslint:recommended"
+}
