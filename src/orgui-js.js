@@ -11,6 +11,18 @@ rootNS['Modifiers']['setFlag'] = setFlag;
 rootNS['components'] = rootNS['components'] || {};
 const componentsNS = rootNS['components'];
 
+import Assist from '../lib/components/assist.js';
+componentsNS['Assist'] = Assist;
+componentsNS['Assist']['ELEMENT_CLASSES'] = {
+  'TARGET': Assist.ELEMENT_CLASSES.TARGET,
+  'SUGGEST': Assist.ELEMENT_CLASSES.SUGGEST,
+};
+componentsNS['Assist']['Builder'] = Assist.Builder;
+componentsNS['Assist']['Builder']['prototype']['build'] = Assist.Builder.prototype.build;
+componentsNS['Assist']['from'] = Assist.from;
+componentsNS['Assist']['prototype']['appendSuggestItem'] = Assist.prototype.appendSuggestItem;
+componentsNS['Assist']['prototype']['clearSuggest'] = Assist.prototype.clearSuggest;
+
 import FieldGroup from '../lib/components/fieldGroup.js';
 componentsNS['FieldGroup'] = FieldGroup;
 componentsNS['FieldGroup']['prototype']['show'] = FieldGroup.prototype.show;
@@ -19,9 +31,9 @@ componentsNS['FieldGroup']['prototype']['getValue'] = FieldGroup.prototype.getVa
 componentsNS['FieldGroup']['prototype']['setValue'] = FieldGroup.prototype.setValue;
 componentsNS['FieldGroup']['prototype']['setHazarding'] = FieldGroup.prototype.setHazarding;
 componentsNS['FieldGroup']['ELEMENT_CLASSES'] = {
-  LABEL: FieldGroup.ELEMENT_CLASSES.LABEL,
-  CHILD: FieldGroup.ELEMENT_CLASSES.CHILD,
-  HELP_TEXT: FieldGroup.ELEMENT_CLASSES.HELP_TEXT,
+  'LABEL': FieldGroup.ELEMENT_CLASSES.LABEL,
+  'CHILD': FieldGroup.ELEMENT_CLASSES.CHILD,
+  'HELP_TEXT': FieldGroup.ELEMENT_CLASSES.HELP_TEXT,
 };
 componentsNS['FieldGroup']['Builder'] = FieldGroup.Builder;
 componentsNS['FieldGroup']['Builder']['prototype']['withDecorator'] = FieldGroup.Builder.prototype.withDecorator;
@@ -31,8 +43,8 @@ componentsNS['FieldGroup']['from'] = FieldGroup.from;
 import Switch from '../lib/components/switch.js';
 componentsNS['Switch'] = Switch;
 componentsNS['Switch']['ELEMENT_CLASSES'] = {
-  INPUT: Switch.ELEMENT_CLASSES.INPUT,
-  SLIDER: Switch.ELEMENT_CLASSES.SLIDER,
+  'INPUT': Switch.ELEMENT_CLASSES.INPUT,
+  'SLIDER': Switch.ELEMENT_CLASSES.SLIDER,
 };
 componentsNS['Switch']['Builder'] = Switch.Builder;
 componentsNS['Switch']['Builder']['prototype']['build'] = Switch.Builder.prototype.build;
