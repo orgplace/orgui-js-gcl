@@ -22,6 +22,7 @@ componentsNS['Assist']['Builder']['prototype']['build'] = Assist.Builder.prototy
 componentsNS['Assist']['from'] = Assist.from;
 componentsNS['Assist']['prototype']['appendSuggestItem'] = Assist.prototype.appendSuggestItem;
 componentsNS['Assist']['prototype']['clearSuggest'] = Assist.prototype.clearSuggest;
+componentsNS['Assist']['prototype']['getTarget'] = Assist.prototype.getTarget;
 
 import FieldGroup from '../../lib/components/fieldGroup.js';
 componentsNS['FieldGroup'] = FieldGroup;

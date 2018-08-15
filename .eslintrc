@@ -21,5 +21,8 @@
 		"semi": ["error", "always"],
 		"complexity": "warn"
 	},
-	"extends": "eslint:recommended"
+	"extends": "eslint:recommended",
+	"globals": {
+		"orgUi": true
+	}
 }
