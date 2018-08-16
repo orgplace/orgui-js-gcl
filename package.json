@@ -17,8 +17,8 @@
     "jest": "^23.1.0"
   },
   "jest": {
-    "globals": {
-      "window": true
-    }
+    "testMatch": [
+      "**/__tests__/**/*.test.js"
+    ]
   }
 }

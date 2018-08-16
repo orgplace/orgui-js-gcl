@@ -1,15 +1,6 @@
 // 'use strict';
 
-const fs = require('fs');
-const { Script } = require("vm");
-
-const orgUi = (function(){
-  const code = fs.readFileSync(`${process.env['TARGET_DIR']}/orgui-js.js`).toString();
-  const orgUiScript = new Script(code);
-  const ctx = {window: global};
-  orgUiScript.runInNewContext(ctx);
-  return ctx.window.orgUi;
-})();
+const orgUi = require('../orgui-js');
 
 test('FieldGroup', () => {
 
