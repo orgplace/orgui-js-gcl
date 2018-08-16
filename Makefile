@@ -44,7 +44,7 @@ $(TARGET_DIR)/%.js: $(SOURCE_DIR)/%.js $(LIB_SOURCES)
 	echo "//# sourceMappingURL=$(notdir $@).map" >> $@
 
 test: $(TARGETS)
-#	npm run test
+	TARGET_DIR=$(TARGET_DIR) npm run test
 
 sources: $(SOURCES) $(LIB_SOURCES)
 	rsync -avr --delete $(SOURCE_DIR)/ $(TARGET_DIR)/$(SOURCE_DIR)/
