@@ -1,4 +1,4 @@
-// 'use strict';
+'use strict';
 
 const orgUi = require('../orgui-js');
 
@@ -15,7 +15,23 @@ test('FieldGroup', () => {
   const fg = orgUi.components.FieldGroup.from($jsSample);
 
   expect(fg.getValue()).toBe('test');
+
   expect(fg.getChild()).toBe($child);
+
   fg.setValue('new value');
   expect($child.value).toBe('new value');
+
+  fg.setHazarding();
+  expect($jsSample.classList).toContain(orgUi.Modifiers.HAZARDING);
+  fg.setHazarding(false);
+  expect($jsSample.classList).not.toContain(orgUi.Modifiers.HAZARDING);
+
+  fg.setHazarding();
+  $child.focus();
+  expect($jsSample.classList).not.toContain(orgUi.Modifiers.HAZARDING);
+
+  fg.show(false);
+  expect($jsSample.style.display).toBe('none');
+  fg.show();
+  expect($jsSample.style.display).toBe('');
 });
