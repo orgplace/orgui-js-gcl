@@ -4,7 +4,7 @@ const fs = require('fs');
 const { Script } = require("vm");
 
 const orgUi = (function(){
-  const code = fs.readFileSync(`../dist/js/orgui-js.js`).toString();
+  const code = fs.readFileSync(`${process.env['TARGET_DIR']}/orgui-js.js`).toString();
   const orgUiScript = new Script(code);
   const ctx = {window: global};
   orgUiScript.runInNewContext(ctx);
