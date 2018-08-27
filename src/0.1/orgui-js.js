@@ -4,12 +4,15 @@ const rootNS = window['orgUi'];
 import Modifiers, { setFlag } from '../../lib/modifiers.js';
 rootNS['Modifiers'] = {
   'HAZARDING': Modifiers.HAZARDING,
+  'SELECTED': Modifiers.SELECTED,
 };
 rootNS['Modifiers']['setFlag'] = setFlag;
 
 import EventComponent, { ComponentEvent } from '../../lib/eventComponent.js';
 
 rootNS['EventComponent'] = EventComponent;
+rootNS['EventComponent']['prototype']['addEventListener'] = EventComponent.prototype.addEventListener;
+rootNS['EventComponent']['prototype']['removeEventListener'] = EventComponent.prototype.removeEventListener;
 
 rootNS['ComponentEvent'] = ComponentEvent;
 rootNS['ComponentEvent']['prototype']['preventDefault'] = ComponentEvent.prototype.preventDefault;
@@ -22,6 +25,7 @@ componentsNS['Assist'] = Assist;
 componentsNS['Assist']['ELEMENT_CLASSES'] = {
   'TARGET': Assist.ELEMENT_CLASSES.TARGET,
   'SUGGEST': Assist.ELEMENT_CLASSES.SUGGEST,
+  'SUGGEST_ITEMS': Assist.ELEMENT_CLASSES.SUGGEST_ITEMS,
 };
 componentsNS['Assist']['Builder'] = Assist.Builder;
 componentsNS['Assist']['Builder']['prototype']['build'] = Assist.Builder.prototype.build;
@@ -30,6 +34,7 @@ componentsNS['Assist']['prototype']['appendSuggestItem'] = Assist.prototype.appe
 componentsNS['Assist']['prototype']['clearSuggest'] = Assist.prototype.clearSuggest;
 componentsNS['Assist']['prototype']['getTarget'] = Assist.prototype.getTarget;
 componentsNS['Assist']['prototype']['getSuggest'] = Assist.prototype.getSuggest;
+componentsNS['Assist']['prototype']['getSuggestItems'] = Assist.prototype.getSuggestItems;
 
 import FieldGroup from '../../lib/components/fieldGroup.js';
 componentsNS['FieldGroup'] = FieldGroup;
