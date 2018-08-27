@@ -7,6 +7,12 @@ rootNS['Modifiers'] = {
 };
 rootNS['Modifiers']['setFlag'] = setFlag;
 
+import EventComponent, { ComponentEvent } from '../lib/eventComponent.js';
+
+rootNS['EventComponent'] = EventComponent;
+
+rootNS['ComponentEvent'] = ComponentEvent;
+rootNS['ComponentEvent']['prototype']['preventDefault'] = ComponentEvent.prototype.preventDefault;
 
 rootNS['components'] = rootNS['components'] || {};
 const componentsNS = rootNS['components'];
@@ -23,6 +29,7 @@ componentsNS['Assist']['from'] = Assist.from;
 componentsNS['Assist']['prototype']['appendSuggestItem'] = Assist.prototype.appendSuggestItem;
 componentsNS['Assist']['prototype']['clearSuggest'] = Assist.prototype.clearSuggest;
 componentsNS['Assist']['prototype']['getTarget'] = Assist.prototype.getTarget;
+componentsNS['Assist']['prototype']['getSuggest'] = Assist.prototype.getSuggest;
 
 import FieldGroup from '../lib/components/fieldGroup.js';
 componentsNS['FieldGroup'] = FieldGroup;
