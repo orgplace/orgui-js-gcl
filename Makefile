@@ -30,7 +30,6 @@ $(TARGET_DIR)/%.js: $(SOURCE_DIR)/%.js $(LIB_SOURCES)
 	java -client -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -Xverify:none -Xms1024m -Xmx1024m -jar $(CLOSURE_COMPILER) \
 		--language_in=ECMASCRIPT6_STRICT \
 		--language_out=ECMASCRIPT5_STRICT \
-		--process_common_js_modules \
 		--rewrite_polyfills=false \
 		--output_wrapper='(()=>{%output%})();' \
 		--compilation_level=$(CLOSURE_COMPILATION_LEVEL) \

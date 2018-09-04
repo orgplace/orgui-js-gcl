@@ -8,7 +8,7 @@ rootNS['Modifiers'] = {
 };
 rootNS['Modifiers']['setFlag'] = setFlag;
 
-import EventComponent, { ComponentEvent } from '../lib/eventComponent.js';
+import { EventComponent, ComponentEvent } from '../lib/eventComponent.js';
 
 rootNS['EventComponent'] = EventComponent;
 rootNS['EventComponent']['prototype']['addEventListener'] = EventComponent.prototype.addEventListener;
