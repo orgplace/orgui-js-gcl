@@ -1,3 +1,5 @@
+/* eslint-disable no-self-assign */
+
 window['orgUi'] = window['orgUi'] || {};
 const rootNS = window['orgUi'];
 
@@ -11,56 +13,56 @@ rootNS['Modifiers']['setFlag'] = setFlag;
 import { EventComponent, ComponentEvent } from '../../lib/eventComponent.js';
 
 rootNS['EventComponent'] = EventComponent;
-rootNS['EventComponent']['prototype']['addEventListener'] = EventComponent.prototype.addEventListener;
-rootNS['EventComponent']['prototype']['removeEventListener'] = EventComponent.prototype.removeEventListener;
+EventComponent['prototype']['addEventListener'] = EventComponent.prototype.addEventListener;
+EventComponent['prototype']['removeEventListener'] = EventComponent.prototype.removeEventListener;
 
 rootNS['ComponentEvent'] = ComponentEvent;
-rootNS['ComponentEvent']['prototype']['preventDefault'] = ComponentEvent.prototype.preventDefault;
+ComponentEvent['prototype']['preventDefault'] = ComponentEvent.prototype.preventDefault;
 
 rootNS['components'] = rootNS['components'] || {};
 const componentsNS = rootNS['components'];
 
 import Assist from '../../lib/components/assist.js';
 componentsNS['Assist'] = Assist;
-componentsNS['Assist']['ELEMENT_CLASSES'] = {
+Assist['ELEMENT_CLASSES'] = {
   'TARGET': Assist.ELEMENT_CLASSES.TARGET,
   'SUGGEST': Assist.ELEMENT_CLASSES.SUGGEST,
   'SUGGEST_ITEMS': Assist.ELEMENT_CLASSES.SUGGEST_ITEMS,
 };
-componentsNS['Assist']['Builder'] = Assist.Builder;
-componentsNS['Assist']['Builder']['prototype']['build'] = Assist.Builder.prototype.build;
-componentsNS['Assist']['from'] = Assist.from;
-componentsNS['Assist']['prototype']['appendSuggestItem'] = Assist.prototype.appendSuggestItem;
-componentsNS['Assist']['prototype']['clearSuggest'] = Assist.prototype.clearSuggest;
-componentsNS['Assist']['prototype']['getTarget'] = Assist.prototype.getTarget;
-componentsNS['Assist']['prototype']['getSuggest'] = Assist.prototype.getSuggest;
-componentsNS['Assist']['prototype']['getSuggestItems'] = Assist.prototype.getSuggestItems;
+Assist['Builder'] = Assist.Builder;
+Assist['Builder']['prototype']['build'] = Assist.Builder.prototype.build;
+Assist['from'] = Assist.from;
+Assist['prototype']['appendSuggestItem'] = Assist.prototype.appendSuggestItem;
+Assist['prototype']['clearSuggest'] = Assist.prototype.clearSuggest;
+Assist['prototype']['getTarget'] = Assist.prototype.getTarget;
+Assist['prototype']['getSuggest'] = Assist.prototype.getSuggest;
+Assist['prototype']['getSuggestItems'] = Assist.prototype.getSuggestItems;
 
 import FieldGroup from '../../lib/components/fieldGroup.js';
 componentsNS['FieldGroup'] = FieldGroup;
-componentsNS['FieldGroup']['prototype']['show'] = FieldGroup.prototype.show;
-componentsNS['FieldGroup']['prototype']['getChild'] = FieldGroup.prototype.getChild;
-componentsNS['FieldGroup']['prototype']['getValue'] = FieldGroup.prototype.getValue;
-componentsNS['FieldGroup']['prototype']['setValue'] = FieldGroup.prototype.setValue;
-componentsNS['FieldGroup']['prototype']['setHazarding'] = FieldGroup.prototype.setHazarding;
-componentsNS['FieldGroup']['ELEMENT_CLASSES'] = {
+FieldGroup['prototype']['show'] = FieldGroup.prototype.show;
+FieldGroup['prototype']['getChild'] = FieldGroup.prototype.getChild;
+FieldGroup['prototype']['getValue'] = FieldGroup.prototype.getValue;
+FieldGroup['prototype']['setValue'] = FieldGroup.prototype.setValue;
+FieldGroup['prototype']['setHazarding'] = FieldGroup.prototype.setHazarding;
+FieldGroup['ELEMENT_CLASSES'] = {
   'LABEL': FieldGroup.ELEMENT_CLASSES.LABEL,
   'CHILD': FieldGroup.ELEMENT_CLASSES.CHILD,
   'HELP_TEXT': FieldGroup.ELEMENT_CLASSES.HELP_TEXT,
 };
-componentsNS['FieldGroup']['Builder'] = FieldGroup.Builder;
-componentsNS['FieldGroup']['Builder']['prototype']['withDecorator'] = FieldGroup.Builder.prototype.withDecorator;
-componentsNS['FieldGroup']['Builder']['prototype']['withUnhazardingOn'] = FieldGroup.Builder.prototype.withUnhazardingOn;
-componentsNS['FieldGroup']['from'] = FieldGroup.from;
+FieldGroup['Builder'] = FieldGroup.Builder;
+FieldGroup['Builder']['prototype']['withDecorator'] = FieldGroup.Builder.prototype.withDecorator;
+FieldGroup['Builder']['prototype']['withUnhazardingOn'] = FieldGroup.Builder.prototype.withUnhazardingOn;
+FieldGroup['from'] = FieldGroup.from;
 
 import Switch from '../../lib/components/switch.js';
 componentsNS['Switch'] = Switch;
-componentsNS['Switch']['prototype']['isChecked'] = Switch.prototype.isChecked;
-componentsNS['Switch']['prototype']['setChecked'] = Switch.prototype.setChecked;
-componentsNS['Switch']['ELEMENT_CLASSES'] = {
+Switch['prototype']['isChecked'] = Switch.prototype.isChecked;
+Switch['prototype']['setChecked'] = Switch.prototype.setChecked;
+Switch['ELEMENT_CLASSES'] = {
   'INPUT': Switch.ELEMENT_CLASSES.INPUT,
   'SLIDER': Switch.ELEMENT_CLASSES.SLIDER,
 };
-componentsNS['Switch']['Builder'] = Switch.Builder;
-componentsNS['Switch']['Builder']['prototype']['build'] = Switch.Builder.prototype.build;
-componentsNS['Switch']['from'] = Switch.from;
+Switch['Builder'] = Switch.Builder;
+Switch['Builder']['prototype']['build'] = Switch.Builder.prototype.build;
+Switch['from'] = Switch.from;
