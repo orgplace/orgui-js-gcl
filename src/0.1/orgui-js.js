@@ -55,6 +55,8 @@ componentsNS['FieldGroup']['from'] = FieldGroup.from;
 
 import Switch from '../../lib/components/switch.js';
 componentsNS['Switch'] = Switch;
+componentsNS['Switch']['prototype']['isChecked'] = Switch.prototype.isChecked;
+componentsNS['Switch']['prototype']['setChecked'] = Switch.prototype.setChecked;
 componentsNS['Switch']['ELEMENT_CLASSES'] = {
   'INPUT': Switch.ELEMENT_CLASSES.INPUT,
   'SLIDER': Switch.ELEMENT_CLASSES.SLIDER,
