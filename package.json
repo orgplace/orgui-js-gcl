@@ -12,8 +12,8 @@
   "author": "Org Place Project",
   "license": "Apache-2.0",
   "devDependencies": {
-    "eslint": "^5.4.0",
-    "eslint-plugin-jest": "^21.17.0",
-    "jest": "^23.1.0"
+    "eslint": "^5.9.0",
+    "eslint-plugin-jest": "^21.27.2",
+    "jest": "^23.6.0"
   }
 }
